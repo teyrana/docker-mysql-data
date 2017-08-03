@@ -1,0 +1,6 @@
+
+# LOCAL ONLY.  DO NOT CHECK THIS FILE IN!
+.passwords
+
+# docker container id files
+*.cid
