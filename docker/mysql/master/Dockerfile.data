@@ -1,0 +1,10 @@
+FROM mysql:5.7
+
+# create a named container volume to share. While this container doesn’t run an application,
+# it reuses the `mysql` image so that all containers are using layers in common, saving disk space.
+
+# # already defined in the parent 'mysql' image
+# VOLUME /var/lib/mysql
+
+#  not necessary, but should prevent a naive operator from trying to run this container
+CMD ["true"]

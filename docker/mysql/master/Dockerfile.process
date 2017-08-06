@@ -1,0 +1,13 @@
+FROM mysql:5.7
+
+# https://docs.docker.com/engine/reference/builder/
+
+
+RUN mkdir -p /etc/my.cnf.d &&\
+    echo "!includedir /etc/my.cnf.d/" >> /etc/my.cnf
+COPY mysqld.cnf  /etc/my.cnf.d/mysqld.cnf
+
+# ENV MYSQL_HOME /home/mysql
+# RUN mkdir -p ${MYSQL_HOME} && cd ${MYSQL_HOME}
+
+# RUN chown -R mysql:mysql ${MYSQL_HOME}
